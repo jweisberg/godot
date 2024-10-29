@@ -1752,7 +1752,7 @@ Curve3D::Interval Curve3D::_find_interval(real_t p_offset) const {
 	int pc = baked_point_cache.size();
 	ERR_FAIL_COND_V_MSG(pc < 2, interval, "Less than two points in cache");
 
-	ERR_FAIL_COND_V_MSG(!Math::is_finite(p_offset), interval, "Offset is NaN");
+	ERR_FAIL_COND_V_MSG(!Math::is_finite(p_offset), interval, "Offset is non-finite");
 
 	int start = 0;
 	int end = pc;
