@@ -479,7 +479,7 @@ void Curve::set_bake_resolution(int p_resolution) {
 }
 
 real_t Curve::sample_baked(real_t p_offset) const {
-	// Make sure that p_offset is finite
+	// Make sure that p_offset is finite.
 	ERR_FAIL_COND_V_MSG(!Math::is_finite(p_offset), 0, "Offset is non-finite");
 	
 	if (_baked_cache_dirty) {
